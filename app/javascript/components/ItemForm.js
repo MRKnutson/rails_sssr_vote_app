@@ -2,7 +2,7 @@ import axios from "axios";
 import React, {useState} from "react"
 
 const ItemForm = (props) => {
-  const {id, addItem, name: initialName, likes: initialLikes, updateItem } = props;
+  const { id, addItem, name: initialName, likes: initialLikes, updateItem } = props;
   // const initialLikes = props.likes
   const [name, setName] = useState(initialName ? initialName : '')
   const [likes, setLikes] = useState(initialLikes ? initialLikes : '')
@@ -27,7 +27,7 @@ const ItemForm = (props) => {
   };
   return(
     <div style = {styles.container}>
-      <h1>{id ? "Edit" : "New" } Item Form</h1>
+      <h1>{ id ? "Edit" : "New" } Item Form</h1>
       <form onSubmit ={handleSubmit}>
         <p>Name:</p>
         <input value = {name} onChange ={(e)=> setName(e.target.value)}/>
